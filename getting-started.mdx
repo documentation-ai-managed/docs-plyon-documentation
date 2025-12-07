@@ -1,0 +1,115 @@
+---
+title: Getting Started
+description: Step-by-step guide to set up your first Plyon documentation project
+---
+
+## Prerequisites
+
+Before you begin, ensure you have the following:
+
+- A Plyon account (sign up at plyon.com)
+- Basic knowledge of markdown
+- Access to your project repository
+
+<Callout kind="info">Plyon works with any version control system including Git, SVN, and Mercurial.</Callout>
+
+## Installation
+
+<Steps>
+  <Step title="Sign Up" icon="user">
+    Create your Plyon account at plyon.com/signup.
+  </Step>
+  <Step title="Install CLI" icon="terminal">
+    <CodeGroup tabs="npm,yarn">
+      ```bash
+npm install -g @plyon/cli
+```
+      ```bash
+yarn global add @plyon/cli
+```
+    </CodeGroup>
+  </Step>
+  <Step title="Authenticate" icon="key">
+    ```bash
+plyon login
+```
+  </Step>
+  <Step title="Create Project" icon="folder">
+    ```bash
+plyon init my-project
+```
+  </Step>
+</Steps>
+
+## Configuration
+
+After creating your project, configure it for your needs.
+
+<Tabs>
+  <Tab title="Basic Config" icon="settings">
+    Set up basic project settings including name, description, and visibility.
+    
+    ```json
+    {
+      "name": "My Project",
+      "description": "API documentation for my service",
+      "visibility": "public"
+    }
+    ```
+  </Tab>
+  <Tab title="Advanced Config" icon="sliders">
+    Configure advanced features like custom domains and integrations.
+    
+    <Expandable title="Integration Options" default-open="false">
+      - GitHub integration
+      - Slack notifications
+      - Custom webhooks
+    </Expandable>
+  </Tab>
+</Tabs>
+
+<Callout kind="tip">Use the configuration wizard to set up integrations automatically.</Callout>
+
+## Writing Your First Document
+
+<Steps>
+  <Step title="Create File" icon="file">
+    Create a new markdown file in your project directory.
+  </Step>
+  <Step title="Add Content" icon="edit">
+    Write your documentation using markdown syntax.
+  </Step>
+  <Step title="Preview" icon="eye">
+    Use the live preview to see how your content will look.
+  </Step>
+  <Step title="Publish" icon="upload">
+    Publish your document to make it available to your team.
+  </Step>
+</Steps>
+
+## Collaboration Setup
+
+Enable team collaboration features to work together effectively.
+
+<ExpandableGroup>
+  <Expandable title="Team Permissions" default-open="true">
+    Configure roles and permissions for your team members.
+  </Expandable>
+  <Expandable title="Review Process" default-open="false">
+    Set up approval workflows for important documentation changes.
+  </Expandable>
+</ExpandableGroup>
+
+## Troubleshooting
+
+Common issues and their solutions:
+
+| Issue | Solution |
+|-------|----------|
+| CLI not found | Reinstall CLI or check PATH |
+| Authentication failed | Verify credentials and try again |
+| Project sync error | Check repository permissions |
+
+<Callout kind="alert">If you encounter persistent issues, check our troubleshooting guide or contact support.</Callout>
+
+This guide provides a comprehensive introduction to getting started with Plyon, covering installation, configuration, and basic usage patterns.

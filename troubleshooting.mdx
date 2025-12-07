@@ -1,0 +1,95 @@
+---
+title: Troubleshooting
+description: Common issues and solutions for Plyon Documentation
+---
+
+## Common Issues
+
+Find solutions to frequently encountered problems.
+
+<ExpandableGroup>
+  <Expandable title="Authentication Problems" default-open="true">
+    <Steps>
+      <Step title="Check API Key" icon="key">
+        Verify your API key is correct and not expired.
+      </Step>
+      <Step title="Test Connection" icon="wifi">
+        Test your connection using the CLI.
+        
+        ```bash
+        plyon test-connection
+        ```
+      </Step>
+    </Steps>
+  </Expandable>
+  <Expandable title="Sync Issues" default-open="false">
+    <Expandable title="Repository Permissions" default-open="false">
+      Ensure your account has write access to the repository.
+    </Expandable>
+    <Expandable title="Network Problems" default-open="false">
+      Check your internet connection and firewall settings.
+    </Expandable>
+  </Expandable>
+</ExpandableGroup>
+
+## Performance Issues
+
+<Callout kind="info">Performance problems are often related to large repositories or network issues.</Callout>
+
+<Tabs>
+  <Tab title="Slow Sync" icon="clock">
+    <Steps>
+      <Step title="Optimize Repository" icon="settings">
+        Clean up unnecessary files and reduce repository size.
+      </Step>
+      <Step title="Check Network" icon="wifi">
+        Test your upload/download speeds.
+      </Step>
+    </Steps>
+  </Tab>
+  <Tab title="Memory Usage" icon="cpu">
+    <Expandable title="Memory Optimization" default-open="false">
+      - Close unused applications
+      - Increase system memory if possible
+      - Use lighter themes
+    </Expandable>
+  </Tab>
+</Tabs>
+
+## Error Messages
+
+| Error | Cause | Solution |
+|-------|--------|----------|
+| Invalid API key | Wrong or expired key | Generate new key |
+| Permission denied | Insufficient access | Check repository permissions |
+| Connection timeout | Network issue | Retry or check connection |
+
+<Callout kind="tip">Enable debug logging for detailed error information.</Callout>
+
+## Getting Help
+
+<Columns cols={2}>
+  <Card title="Community Forum" icon="users" href="#community">
+    Ask questions and share solutions.
+  </Card>
+  <Card title="Support Ticket" icon="mail" href="#support">
+    Contact our support team.
+  </Card>
+</Columns>
+
+## Debug Mode
+
+Enable debug mode for detailed logging.
+
+```bash
+plyon --debug command
+```
+
+<Expandable title="Debug Output" default-open="false">
+  Debug logs include:
+  - API request/response details
+  - File system operations
+  - Network diagnostics
+</Expandable>
+
+This troubleshooting guide helps you resolve common issues and optimize your Plyon experience.

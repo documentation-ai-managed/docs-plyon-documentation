@@ -1,0 +1,117 @@
+---
+title: API Integration
+description: Learn how to integrate Plyon with your applications and workflows
+---
+
+## API Overview
+
+Plyon's REST API allows you to programmatically manage documentation projects and content.
+
+<Callout kind="info">All API endpoints require authentication using API keys.</Callout>
+
+## Authentication
+
+<Steps>
+  <Step title="Get API Key" icon="key">
+    Generate an API key from your account settings.
+  </Step>
+  <Step title="Include in Headers" icon="settings">
+    Add the key to your request headers.
+    
+    ```bash
+    curl -H "Authorization: Bearer YOUR_API_KEY" \
+         https://api.plyon.com/v1/projects
+    ```
+  </Step>
+</Steps>
+
+## Core Endpoints
+
+<Tabs>
+  <Tab title="Projects" icon="folder">
+    Manage documentation projects.
+    
+    <Request tabs="Create Project,List Projects">
+      ```json
+      {
+        "name": "My Project",
+        "description": "API documentation"
+      }
+      ```
+      ```json
+      [
+        {
+          "id": "proj_123",
+          "name": "My Project"
+        }
+      ]
+      ```
+    </Request>
+  </Tab>
+  <Tab title="Documents" icon="file-text">
+    Create and update documents.
+    
+    <Response tabs="Document Response">
+      ```json
+      {
+        "id": "doc_456",
+        "title": "API Guide",
+        "content": "# API Guide\n\nThis is..."
+      }
+      ```
+    </Response>
+  </Tab>
+</Tabs>
+
+## Webhooks
+
+Receive real-time notifications about documentation changes.
+
+<ExpandableGroup>
+  <Expandable title="Webhook Events" default-open="true">
+    - Document created
+    - Document updated
+    - Project published
+  </Expandable>
+  <Expandable title="Configuration" default-open="false">
+    Set up webhook URLs and select events to monitor.
+  </Expandable>
+</ExpandableGroup>
+
+## SDKs
+
+<Columns cols={3}>
+  <Card title="JavaScript" icon="code" href="#js-sdk">
+    Official JavaScript SDK.
+  </Card>
+  <Card title="Python" icon="terminal" href="#python-sdk">
+    Python SDK with async support.
+  </Card>
+  <Card title="Go" icon="cpu" href="#go-sdk">
+    Go SDK for high-performance applications.
+  </Card>
+</Columns>
+
+## Error Handling
+
+Handle API errors gracefully.
+
+<Callout kind="alert">Check response status codes and error messages for debugging.</Callout>
+
+| Status Code | Meaning |
+|-------------|---------|
+| 200 | Success |
+| 400 | Bad request |
+| 401 | Unauthorized |
+| 404 | Not found |
+| 500 | Server error |
+
+## Rate Limits
+
+<Expandable title="Rate Limit Details" default-open="false">
+  - 1000 requests per hour for free tier
+  - 10000 requests per hour for paid plans
+  - Headers include rate limit information
+</Expandable>
+
+This guide covers the essentials of integrating with Plyon's API for automated documentation workflows.

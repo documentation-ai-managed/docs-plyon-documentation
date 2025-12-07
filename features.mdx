@@ -1,0 +1,107 @@
+---
+title: Features
+description: Explore Plyon's powerful features for documentation management
+---
+
+## Core Features
+
+Plyon offers a comprehensive set of features designed to streamline documentation workflows.
+
+<Columns cols={3}>
+  <Card title="Rich Editor" icon="edit" href="#rich-editor">
+    Write with our advanced markdown editor featuring live preview.
+  </Card>
+  <Card title="Version Control" icon="git-branch" href="#version-control">
+    Track changes and collaborate with integrated version control.
+  </Card>
+  <Card title="Search & Discovery" icon="search" href="#search">
+    Find content quickly with powerful search capabilities.
+  </Card>
+</Columns>
+
+## Rich Editor
+
+Our editor provides everything you need to create professional documentation.
+
+<Tabs>
+  <Tab title="Markdown Support" icon="file-text">
+    Full markdown support with extensions for tables, code blocks, and more.
+    
+    ```markdown
+    # Heading
+    
+    **Bold text** and _italic text_.
+    
+    | Feature | Description |
+    |---------|-------------|
+    | Tables | Supported |
+    ```
+  </Tab>
+  <Tab title="Live Preview" icon="eye">
+    See changes instantly with side-by-side preview.
+    
+    <Expandable title="Preview Options" default-open="false">
+      - Desktop view
+      - Mobile preview
+      - Print layout
+    </Expandable>
+  </Tab>
+</Tabs>
+
+## Version Control
+
+<Steps>
+  <Step title="Commit Changes" icon="check-circle">
+    Automatically commit changes to your repository.
+  </Step>
+  <Step title="Branch Management" icon="git-branch">
+    Create branches for different versions or features.
+  </Step>
+  <Step title="Merge Reviews" icon="users">
+    Review and approve changes before merging.
+  </Step>
+</Steps>
+
+<Callout kind="info">Version control integration ensures your documentation stays in sync with your code.</Callout>
+
+## Search & Discovery
+
+Find content quickly with advanced search features.
+
+<ExpandableGroup>
+  <Expandable title="Search Filters" default-open="true">
+    Filter by project, author, date, and content type.
+  </Expandable>
+  <Expandable title="Full-Text Search" default-open="false">
+    Search across all content including code examples and metadata.
+  </Expandable>
+</ExpandableGroup>
+
+## Integrations
+
+Connect Plyon with your favorite tools.
+
+<Columns cols={2}>
+  <Card title="GitHub" icon="github" href="#github-integration">
+    Sync with GitHub repositories.
+  </Card>
+  <Card title="Slack" icon="message-circle" href="#slack-integration">
+    Get notifications in Slack.
+  </Card>
+</Columns>
+
+## API Features
+
+Build powerful integrations with our REST API.
+
+<ParamField path="projects" param-type="string" required="true">
+  Project identifier
+</ParamField>
+
+<ResponseField name="id" field-type="string" required="true">
+  Unique project identifier
+</ResponseField>
+
+<Callout kind="tip">Explore our API documentation for complete integration options.</Callout>
+
+This overview highlights Plyon's key features and capabilities for managing documentation effectively.
